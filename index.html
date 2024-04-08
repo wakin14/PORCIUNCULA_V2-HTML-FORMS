@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wakitchen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+        <img src="cheffimage3.jpg" alt="Logo">
+        <h1>Wakitchen</h1>
+        <h2>"First we eat, then we do everything else."</h2>
+    </header>
+
+    <form id="order-form">
+        <div class="basic-info">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+
+        <div class="cuisine-info">
+            <label for="cuisine">Type of Cuisine:</label>
+            <select id="cuisine" name="cuisine">
+                <option value="Filipino">Filipino</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Italian">Italian</option>
+                <option value="Korean">Korean</option>
+            </select>
+
+            <label for="payment">Mode of Payment:</label>
+            <select id="payment" name="payment">
+                <option value="cash">Cash</option>
+                <option value="card">Card</option>
+            </select>
+        </div>
+
+        <div class="order-options">
+            <label for="dine-take">Dine In/Take Out:</label>
+            <select id="dine-take" name="dine-take">
+                <option value="dine-in">Dine In</option>
+                <option value="take-out">Take Out</option>
+            </select>
+
+            <label for="comments">Comments/Instructions:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+
+        <div class="button-container">
+            <button type="submit" id="place-order">Place Order</button>
+            <button type="button" id="cancel-order">Cancel</button>
+        </div>
+    </form>
+
+    <div id="dropdown">
+        <button class="dropdown-toggle">
+            <span>Menu</span>
+            <i class="fa-caret-down"></i>
+        </button>
+        <ul class="menu">
+            <li class="menu-item"><a href="#">Filipino</a></li>
+            <li class="menu-item"><a href="#">Chinese</a></li>
+            <li class="menu-item dropdown">
+                <a href="#" class="submenu-toggle">
+                    <span>Vegetarian</span>
+                    <i class="fa-solid fa-care-right"></i>
+                </a>
+                <ul class="submenu">
+                    <li class="submenu-item"><a href="#">Mexican</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#">Italian</a></li>
+            <li class="menu-item dropdown">
+                <a href="#" class="submenu-toggle">
+                    <span>Korean</span>
+                    <i class="fa-solid fa-care-right"></i>
+                </a>
+                <ul class="submenu">
+                   
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
